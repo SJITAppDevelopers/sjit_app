@@ -4,7 +4,7 @@
  [https://www.stjosephstechnology.ac.in/web/index.html](https://www.stjosephstechnology.ac.in/web/index.html)
 
 
-### Initial Developers :
+### Development Team :
 + #### [Vigram K M ](https://github.com/Vigram-Mani)
 + #### [Sanjith Kumar M ](https://github.com/sanjith1309)
 + #### [Sethulakshmanan S P ](https://github.com/sethubolt7)
