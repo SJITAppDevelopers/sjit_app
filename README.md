@@ -5,7 +5,7 @@
 
 ## About :
  - This is the repository for the **St. Joseph's Institute of Technology App**.
- - Built with Flutter, ensuring a **Cross-platform** reach to our app
+ - Built with '#34baeb' Flutter, ensuring a **Cross-platform** reach to our app
 
 
 ### Development Team :
