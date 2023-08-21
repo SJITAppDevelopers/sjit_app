@@ -5,8 +5,8 @@
 
 
 # Initial Developers :
-+ ## [Vigram K M ]()
-+ ## [Sanjith Kumar M ]()
++ ## [Vigram K M ](https://github.com/Vigram-Mani)
++ ## [Sanjith Kumar M ](https://github.com/sanjith1309)
 + ## [Sethulakshmanan S P ]()
 + ## [Sivaganesh N]()
 + ## [Yogesh Shamlin Shinanth J S]()
