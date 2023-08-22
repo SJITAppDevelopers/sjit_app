@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sjit_app/screens/profile_screen.dart';
 // import 'profile_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -11,7 +12,6 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -128,9 +128,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         Colors.black), // White text color
                   ),
                   onPressed: () {
-                    // Add your onPressed handler here
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ProfileScreen()),
+                    );
                   },
-                  child: Text('Submit'),
+                  child: const Text('Submit'),
                 ),
                 const SizedBox(
                   height: 40,
@@ -150,11 +154,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Center(
                       child: Column(
                         children: [
-                        const SizedBox(height: 30,),
-                        Image.asset(
-                        "images/GroupName.png",
-                        width: 250,
-                      ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          Image.asset(
+                            "images/GroupName.png",
+                            width: 250,
+                          ),
                         ],
                       ),
                     ),
@@ -166,6 +172,5 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       ),
     );
-
   }
 }
