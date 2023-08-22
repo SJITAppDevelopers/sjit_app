@@ -10,6 +10,16 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final TextEditingController _rollNo = TextEditingController();
+  final TextEditingController _password = TextEditingController();
+
+  @override
+  void dispose() {
+    _rollNo.dispose();
+    _password.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,11 +81,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     color: Colors.white,
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(20),
+                Padding(
+                  padding: const EdgeInsets.all(20),
                   child: TextField(
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
+                    controller: _rollNo,
+                    style: const TextStyle(color: Colors.black),
+                    decoration: const InputDecoration(
                       hintText: 'Roll No.',
                       border: OutlineInputBorder(),
                       filled: true,
@@ -94,11 +105,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(16),
+                Padding(
+                  padding: const EdgeInsets.all(16),
                   child: TextField(
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
+                    controller: _password,
+                    style: const TextStyle(color: Colors.black),
+                    decoration: const InputDecoration(
                       hintText: 'Password',
                       border: OutlineInputBorder(),
                       filled: true,
@@ -128,6 +140,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         Colors.black), // White text color
                   ),
                   onPressed: () {
+                    // Access the username and password here
+                    String username = _rollNo.text;
+                    String password = _password.text;
+
+                    // Now you can use the username and password variables as needed
+                    print('Username: $username');
+                    print('Password: $password');
                     Navigator.push(
                       context,
                       MaterialPageRoute(
