@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sjit_app/screens/profile_screen.dart';
+import 'package:sjit_app/screens/home_screen.dart';
+// import 'package:sjit_app/screens/profile_screen.dart';
 // import 'profile_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -131,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ProfileScreen()),
+                          builder: (context) => const HomeScreen()),
                     );
                   },
                   child: const Text('Submit'),
