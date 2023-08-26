@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sjit_app/screens/home_screen.dart';
+import 'package:sjit_app/screens/login_screen.dart';
 // import 'package:sjit_app/screens/login_screen.dart';
 // import 'package:sjit_app/screens/profile_screen.dart';
 
@@ -14,8 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      // home: LoginScreen(),
-      home: HomeScreen(),
+      home: LoginScreen(),
+      //home: HomeScreen(),
     );
   }
 }
