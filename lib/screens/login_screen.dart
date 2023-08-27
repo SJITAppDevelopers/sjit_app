@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+
 import 'package:sjit_app/screens/home_screen.dart';
-// import 'package:sjit_app/screens/profile_screen.dart';
 // import 'profile_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -23,8 +23,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      resizeToAvoidBottomInset: false, // set it to false
       body: SafeArea(
         child: Container(
           color: const Color(0xFF121536),
@@ -47,35 +48,35 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const SizedBox(
-                          height: 40,
+                        SizedBox(
+                          height: screenHeight * 0.03,
                         ),
                         Image.asset(
                           "images/clgLogo.png",
                           width: 160,
                         ),
-                        const SizedBox(
-                          height: 15,
+                        SizedBox(
+                          height: screenHeight * 0.03,
                         ),
                         Image.asset(
                           "images/clgName.png",
                           width: 275,
                         ),
-                        const SizedBox(
-                          height: 3,
+                        SizedBox(
+                          height: screenHeight * 0.001,
                         ),
                         Image.asset(
                           "images/autoName.png",
                           width: 150,
                         ),
-                        const SizedBox(
-                          height: 20,
+                        SizedBox(
+                          height: screenHeight * 0.03,
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(
-                    height: 30,
+                  SizedBox(
+                    height: screenHeight * 0.03,
                   ),
                   const Text(
                     "SIGN IN",
@@ -109,8 +110,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsets.only(left: 20, right: 20, bottom: 10, top: 10),
+                    padding: const EdgeInsets.only(
+                        left: 20, right: 20, bottom: 10, top: 20),
                     child: TextField(
                       controller: _password,
                       style: const TextStyle(color: Colors.black),
@@ -133,8 +134,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: screenHeight * 0.03,
                   ),
                   ElevatedButton(
                     style: ButtonStyle(
@@ -147,7 +148,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       // Access the username and password here
                       String username = _rollNo.text;
                       String password = _password.text;
-          
+
                       // Now you can use the username and password variables as needed
                       print('Username: $username');
                       print('Password: $password');
@@ -160,7 +161,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: const Text('Submit'),
                   ),
                   const SizedBox(
-                    height: 50,
+                    height: 70,
                   ),
                   Container(
                     decoration: const BoxDecoration(
@@ -176,12 +177,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Center(
                       child: Column(
                         children: [
-                          const SizedBox(
-                            height: 30,
+                          SizedBox(
+                            height: screenHeight*0.06,
                           ),
                           Image.asset(
                             "images/GroupName.png",
                             width: 250,
+                          ),
+                          SizedBox(
+                            height: screenHeight*0.05,
                           ),
                         ],
                       ),
