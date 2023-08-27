@@ -26,14 +26,15 @@ class _LoginScreenState extends State<LoginScreen> {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       body: SafeArea(
-        child: SingleChildScrollView(
-          reverse: true,
-          child: Container(
-            color: const Color(0xFF121536),
+        child: Container(
+          color: const Color(0xFF121536),
+          child: SingleChildScrollView(
+            reverse: true,
             child: Center(
-              child: SizedBox.expand(
+              //child: SizedBox.expand(
+              
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -41,10 +42,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       decoration: const BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(
-                              30), // Adjust the radius as needed
-                          bottomRight: Radius.circular(
-                              30), // Adjust the radius as needed
+                          bottomLeft:
+                              Radius.circular(30), // Adjust the radius as needed
+                          bottomRight:
+                              Radius.circular(30), // Adjust the radius as needed
                         ),
                       ),
                       width: MediaQuery.of(context).size.width,
@@ -79,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     SizedBox(
-                      height: screenHeight * 0.03,
+                      height: screenHeight * 0.05,
                     ),
                     Text(
                       "SIGN IN",
@@ -109,8 +110,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                                color: Colors
-                                    .black), // Color of border when focused
+                                color:
+                                    Colors.black), // Color of border when focused
                           ),
                         ),
                       ),
@@ -137,8 +138,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                                color: Colors
-                                    .black), // Color of border when focused
+                                color:
+                                    Colors.black), // Color of border when focused
                           ),
                         ),
                       ),
@@ -154,7 +155,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         // Access the username and password here
                         String username = _rollNo.text;
                         String password = _password.text;
-
+          
                         // Now you can use the username and password variables as needed
                         print('Username: $username');
                         print('Password: $password');
@@ -167,16 +168,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: const Text('Submit'),
                     ),
                     SizedBox(
-                      height: screenHeight * 0.050,
+                      height: screenHeight * 0.05,
                     ),
                     Container(
                       decoration: const BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(
-                              30), // Adjust the radius as needed
-                          topRight: Radius.circular(
-                              30), // Adjust the radius as needed
+                          topLeft:
+                              Radius.circular(30), // Adjust the radius as needed
+                          topRight:
+                              Radius.circular(30), // Adjust the radius as needed
                         ),
                       ),
                       width: MediaQuery.of(context).size.width,
@@ -187,7 +188,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             Padding(
                               padding: EdgeInsets.only(
                                   top: screenHeight * 0.03,
-                                  bottom: screenHeight * 0.03),
+                                  bottom: screenHeight * 0.02),
                               child: Image.asset(
                                 "images/GroupName.png",
                                 width: screenHeight * 0.3,
@@ -199,7 +200,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ],
                 ),
-              ),
+              
+              //),
             ),
           ),
         ),
