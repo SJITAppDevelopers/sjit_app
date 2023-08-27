@@ -178,15 +178,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Column(
                         children: [
                           SizedBox(
-                            height: screenHeight*0.06,
+                            height: screenHeight*0.04,
                           ),
                           Image.asset(
                             "images/GroupName.png",
                             width: 250,
                           ),
-                          SizedBox(
-                            height: screenHeight*0.05,
-                          ),
+                          
                         ],
                       ),
                     ),
