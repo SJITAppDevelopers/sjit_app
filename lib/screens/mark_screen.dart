@@ -47,39 +47,41 @@ class _DropdownMenuExampleState extends State<DropdownMenuExample> {
           ),
         ),
       ),
-      body : Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        DropdownMenu<String>(
-          initialSelection: dropdownValue,
-          onSelected: (String? value) {
-            setState(() {
-              dropdownValue = value!;
-            });
-          },
-          dropdownMenuEntries: list.map<DropdownMenuEntry<String>>((String value) {
-            return DropdownMenuEntry<String>(value: value, label: value);
-          }).toList(),
-        ),
-        SizedBox(height: 20),
-        DropdownMenu<String>(
-          initialSelection: modelDropdownValue,
-          onSelected: (String? value) {
-            setState(() {
-              modelDropdownValue = value!;
-            });
-          },
-          dropdownMenuEntries: modelList.map<DropdownMenuEntry<String>>((String value) {
-            return DropdownMenuEntry<String>(value: value, label: value);
-          }).toList(),
-        ),
-        SizedBox(height: 20),
-        ElevatedButton(
-          onPressed: _handleSubmit,
-          child: Text('Submit'),
-        ),
-      ],
-    ),
+      body : Center(
+        child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          DropdownMenu<String>(
+            initialSelection: dropdownValue,
+            onSelected: (String? value) {
+              setState(() {
+                dropdownValue = value!;
+              });
+            },
+            dropdownMenuEntries: list.map<DropdownMenuEntry<String>>((String value) {
+              return DropdownMenuEntry<String>(value: value, label: value);
+            }).toList(),
+          ),
+          SizedBox(height: 20),
+          DropdownMenu<String>(
+            initialSelection: modelDropdownValue,
+            onSelected: (String? value) {
+              setState(() {
+                modelDropdownValue = value!;
+              });
+            },
+            dropdownMenuEntries: modelList.map<DropdownMenuEntry<String>>((String value) {
+              return DropdownMenuEntry<String>(value: value, label: value);
+            }).toList(),
+          ),
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: _handleSubmit,
+            child: Text('Submit'),
+          ),
+        ],
+          ),
+      ),
     );
   }
 }
