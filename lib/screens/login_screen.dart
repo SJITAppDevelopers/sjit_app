@@ -29,23 +29,25 @@ class _LoginScreenState extends State<LoginScreen> {
       resizeToAvoidBottomInset: true,
       body: SafeArea(
         child: Container(
+          height: screenHeight,
           color: const Color(0xFF121536),
           child: SingleChildScrollView(
             reverse: true,
             child: Center(
-              //child: SizedBox.expand(
+              
 
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                
                 children: [
                   Container(
                     decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                         bottomLeft:
-                            Radius.circular(30), // Adjust the radius as needed
+                            Radius.circular(30), 
                         bottomRight:
-                            Radius.circular(30), // Adjust the radius as needed
+                            Radius.circular(30), 
                       ),
                     ),
                     width: MediaQuery.of(context).size.width,
@@ -205,7 +207,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
 
-              //),
             ),
           ),
         ),
