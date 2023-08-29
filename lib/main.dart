@@ -1,17 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sjit_app/screens/home_screen.dart';
 import 'package:sjit_app/screens/login_screen.dart';
-import 'package:flutter/services.dart';
-// import 'package:sjit_app/screens/login_screen.dart';
 // import 'package:sjit_app/screens/profile_screen.dart';
 
 void main() {
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
   runApp(const MyApp());
-  
 }
 
 class MyApp extends StatelessWidget {
