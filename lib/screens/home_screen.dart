@@ -21,16 +21,16 @@ class _HomeScreen extends State<HomeScreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(left: 20),
-                child: GestureDetector(
-                  child: const Icon(
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: const Padding(
+                  padding: EdgeInsets.only(left: 20),
+                  child: Icon(
                     Icons.arrow_back_ios,
                     color: Colors.white,
                   ),
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
                 ),
               ),
               Padding(
