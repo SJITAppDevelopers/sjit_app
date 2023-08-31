@@ -141,6 +141,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Colors.black), // Color of border when focused
                         ),
                       ),
+                      obscureText: true,
                     ),
                   ),
                   ElevatedButton(
@@ -151,11 +152,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           Colors.black), // White text color
                     ),
                     onPressed: () {
-                      // Access the username and password here
                       String username = _rollNo.text;
                       String password = _password.text;
                       if (username.isEmpty || password.isEmpty) {
-                        // Display a warning if either username or password is empty
                         showDialog(
                           context: context,
                           builder: (BuildContext context) {
@@ -168,7 +167,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
-                                  child: Text('OK'),
+                                  child: const Text('OK'),
                                 ),
                               ],
                             );
