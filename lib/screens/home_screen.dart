@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sjit_app/screens/mark_screen.dart';
-import 'profile_screen.dart';
+// import 'package:sjit_app/screens/mark_screen.dart';
+// import 'profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -49,15 +49,18 @@ class _HomeScreen extends State<HomeScreen> {
               children: [
                 Image.asset(
                   'images/profile.png',
-                  width: 27,
+                  height: 90,
+                  width: 100,
                 ),
                 Image.asset(
                   'images/attendance.png',
-                  width: 27,
+                  height: 90,
+                  width: 90,
                 ),
                 Image.asset(
                   'images/mark.png',
-                  width: 27,
+                  height: 90,
+                  width: 90,
                 ),
               ],
             ),
@@ -67,15 +70,18 @@ class _HomeScreen extends State<HomeScreen> {
               children: [
                 Image.asset(
                   'images/notes.png',
-                  width: 27,
+                  height: 90,
+                  width: 90,
                 ),
                 Image.asset(
                   'images/events.png',
-                  width: 27,
+                  height: 90,
+                  width: 90,
                 ),
                 Image.asset(
                   'images/forms.png',
-                  width: 27,
+                  height: 90,
+                  width: 90,
                 ),
               ],
             ),
