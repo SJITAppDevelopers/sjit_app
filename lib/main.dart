@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-// import 'package:sjit_app/screens/home_screen.dart';
+import 'package:sjit_app/screens/home_screen.dart';
 import 'package:sjit_app/screens/login_screen.dart';
+import 'package:sjit_app/screens/mark_screen.dart';
+import 'package:sjit_app/screens/profile_screen.dart';
 // import 'package:sjit_app/screens/profile_screen.dart';
 
 void main() {
@@ -12,9 +14,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: LoginScreen(),
-      //home: HomeScreen(),
+    return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginScreen(),
+        'home': (context) => const HomeScreen(),
+        'profile': (context) => const ProfileScreen(),
+        'marks': (context) => const DropdownMenuExample(),
+      },
     );
   }
 }

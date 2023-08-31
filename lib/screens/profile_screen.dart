@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'mark_screen.dart';
+// import 'mark_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -21,11 +21,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(left: 20),
-                child: Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.white,
+                child: GestureDetector(
+                  child: Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.white,
+                  ),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
                 ),
               ),
               Padding(
