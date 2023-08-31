@@ -47,14 +47,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     width: MediaQuery.of(context).size.width,
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: screenHeight * 0.05),
-                          child: Image.asset(
-                            "images/clgLogo.png",
-                            width: screenHeight * 0.2,
-                          ),
+                        SizedBox(
+                          height: screenHeight * 0.03,
+                        ),
+                        Image.asset(
+                          "images/clgLogo.png",
+                          width: screenHeight * 0.2,
                         ),
                         SizedBox(
                           height: screenHeight * 0.03,
