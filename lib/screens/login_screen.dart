@@ -51,9 +51,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          height: screenHeight * 0.03,
+                          height: screenHeight * 0.2,
                         ),
-                        
                         Image.asset(
                           "images/clgLogo.png",
                           width: screenHeight * 0.2,
