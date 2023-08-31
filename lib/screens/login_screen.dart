@@ -34,32 +34,27 @@ class _LoginScreenState extends State<LoginScreen> {
           child: SingleChildScrollView(
             reverse: true,
             child: Center(
-              
-
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                
                 children: [
                   Container(
                     decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
-                        bottomLeft:
-                            Radius.circular(30), 
-                        bottomRight:
-                            Radius.circular(30), 
+                        bottomLeft: Radius.circular(30),
+                        bottomRight: Radius.circular(30),
                       ),
                     ),
                     width: MediaQuery.of(context).size.width,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        SizedBox(
-                          height: screenHeight * 0.05,
-                        ),
-                        Image.asset(
-                          "images/clgLogo.png",
-                          width: screenHeight * 0.2,
+                        Padding(
+                          padding: EdgeInsets.only(top: screenHeight * 0.05),
+                          child: Image.asset(
+                            "images/clgLogo.png",
+                            width: screenHeight * 0.2,
+                          ),
                         ),
                         SizedBox(
                           height: screenHeight * 0.03,
@@ -159,15 +154,35 @@ class _LoginScreenState extends State<LoginScreen> {
                       // Access the username and password here
                       String username = _rollNo.text;
                       String password = _password.text;
-
-                      // Now you can use the username and password variables as needed
-                      print('Username: $username');
-                      print('Password: $password');
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const HomeScreen()),
-                      );
+                      if (username.isEmpty || password.isEmpty) {
+                        // Display a warning if either username or password is empty
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: const Text('Warning'),
+                              content: const Text(
+                                  'Username and password cannot be empty.'),
+                              actions: [
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text('OK'),
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      } else {
+                        print('Username: $username');
+                        print('Password: $password');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomeScreen()),
+                        );
+                      }
                     },
                     child: const Text('Submit'),
                   ),
@@ -206,7 +221,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ],
               ),
-
             ),
           ),
         ),

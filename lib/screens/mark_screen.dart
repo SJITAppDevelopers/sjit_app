@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 
-const List<String> list = <String>['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4', 'Sem 5', 'Sem 6', 'Sem 7', 'Sem 8'];
+const List<String> list = <String>[
+  'Sem 1',
+  'Sem 2',
+  'Sem 3',
+  'Sem 4',
+  'Sem 5',
+  'Sem 6',
+  'Sem 7',
+  'Sem 8'
+];
 const List<String> modelList = <String>['Model 1', 'Model 2', 'Model 3'];
-
 
 class DropdownMenuExample extends StatefulWidget {
   const DropdownMenuExample({super.key});
@@ -24,6 +32,7 @@ class _DropdownMenuExampleState extends State<DropdownMenuExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: const Color(0xFF121536),
@@ -47,40 +56,42 @@ class _DropdownMenuExampleState extends State<DropdownMenuExample> {
           ),
         ),
       ),
-      body : Center(
+      body: Center(
         child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          DropdownMenu<String>(
-            initialSelection: dropdownValue,
-            onSelected: (String? value) {
-              setState(() {
-                dropdownValue = value!;
-              });
-            },
-            dropdownMenuEntries: list.map<DropdownMenuEntry<String>>((String value) {
-              return DropdownMenuEntry<String>(value: value, label: value);
-            }).toList(),
-          ),
-          SizedBox(height: 20),
-          DropdownMenu<String>(
-            initialSelection: modelDropdownValue,
-            onSelected: (String? value) {
-              setState(() {
-                modelDropdownValue = value!;
-              });
-            },
-            dropdownMenuEntries: modelList.map<DropdownMenuEntry<String>>((String value) {
-              return DropdownMenuEntry<String>(value: value, label: value);
-            }).toList(),
-          ),
-          SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: _handleSubmit,
-            child: Text('Submit'),
-          ),
-        ],
-          ),
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            DropdownMenu<String>(
+              initialSelection: dropdownValue,
+              onSelected: (String? value) {
+                setState(() {
+                  dropdownValue = value!;
+                });
+              },
+              dropdownMenuEntries:
+                  list.map<DropdownMenuEntry<String>>((String value) {
+                return DropdownMenuEntry<String>(value: value, label: value);
+              }).toList(),
+            ),
+            SizedBox(height: 20),
+            DropdownMenu<String>(
+              initialSelection: modelDropdownValue,
+              onSelected: (String? value) {
+                setState(() {
+                  modelDropdownValue = value!;
+                });
+              },
+              dropdownMenuEntries:
+                  modelList.map<DropdownMenuEntry<String>>((String value) {
+                return DropdownMenuEntry<String>(value: value, label: value);
+              }).toList(),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: _handleSubmit,
+              child: Text('Submit'),
+            ),
+          ],
+        ),
       ),
     );
   }
