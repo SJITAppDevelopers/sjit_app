@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sjit_app/screens/mark_screen.dart';
 import 'profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,6 +14,7 @@ class _HomeScreen extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: const Color(0xFF121536),
         title: null,
         flexibleSpace: SafeArea(
@@ -81,7 +83,7 @@ class _HomeScreen extends State<HomeScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ProfileScreen(),
+                              builder: (context) => DropdownMenuExample(),
                             ),
                           );
                         },

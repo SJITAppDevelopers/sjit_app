@@ -14,6 +14,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: const Color(0xFF121536),
         title: null,
         flexibleSpace: SafeArea(
@@ -35,14 +36,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
         ),
       ),
-      body: Container(
-          child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => DropdownMenuExample()));
-        },
-        child: Icon(Icons.add),
-      )),
     );
   }
 }
