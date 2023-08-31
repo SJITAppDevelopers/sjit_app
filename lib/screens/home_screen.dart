@@ -38,89 +38,48 @@ class _HomeScreen extends State<HomeScreen> {
       ),
       backgroundColor: Color(0xFFE7E7E7),
       body: SafeArea(
-        child: Container(
-          child: Column(children: [
-            const SizedBox(
-              height: 50,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
             Image.asset('images/clgName.png'),
-            const SizedBox(
-              height: 50,
-            ),
-            Column(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  // Set the width to your desired value
-                  height: 100,
-                  child: Row(
-                    children: [
-                      const SizedBox(
-                        width: 27,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ProfileScreen(),
-                            ),
-                          );
-                        },
-                        child: Image.asset('images/profile.png'),
-                      ),
-                      const SizedBox(
-                        width: 27,
-                      ),
-                      Image.asset('images/attendance.png'),
-                      const SizedBox(
-                        width: 27,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => DropdownMenuExample(),
-                            ),
-                          );
-                        },
-                        child: Image.asset('images/mark.png'),
-                      ),
-                      const SizedBox(
-                        width: 27,
-                      ),
-                    ],
-                  ),
+                Image.asset(
+                  'images/profile.png',
+                  width: 27,
                 ),
-                const SizedBox(
-                  height: 50,
+                Image.asset(
+                  'images/attendance.png',
+                  width: 27,
                 ),
-                Container(
-                  // Set the width to your desired value
-                  height: 100,
-                  child: Row(
-                    children: [
-                      const SizedBox(
-                        width: 27,
-                      ),
-                      Image.asset('images/notes.png'),
-                      const SizedBox(
-                        width: 22,
-                      ),
-                      Image.asset('images/events.png'),
-                      const SizedBox(
-                        width: 22,
-                      ),
-                      Image.asset('images/forms.png'),
-                    ],
-                  ),
-                )
+                Image.asset(
+                  'images/mark.png',
+                  width: 27,
+                ),
               ],
-            )
-          ]),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'images/notes.png',
+                  width: 27,
+                ),
+                Image.asset(
+                  'images/events.png',
+                  width: 27,
+                ),
+                Image.asset(
+                  'images/forms.png',
+                  width: 27,
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
