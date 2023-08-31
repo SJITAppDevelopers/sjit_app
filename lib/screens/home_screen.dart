@@ -21,11 +21,16 @@ class _HomeScreen extends State<HomeScreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(left: 20),
-                child: Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.white,
+                child: GestureDetector(
+                  child: const Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.white,
+                  ),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
                 ),
               ),
               Padding(
@@ -47,10 +52,15 @@ class _HomeScreen extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(
-                  'images/profile.png',
-                  height: 90,
-                  width: 100,
+                GestureDetector(
+                  child: Image.asset(
+                    'images/profile.png',
+                    height: 90,
+                    width: 100,
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, 'profile');
+                  },
                 ),
                 Image.asset(
                   'images/attendance.png',
