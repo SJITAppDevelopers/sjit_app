@@ -36,6 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                verticalDirection: VerticalDirection.down,
                 children: [
                   Container(
                     decoration: const BoxDecoration(
@@ -52,6 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(
                           height: screenHeight * 0.03,
                         ),
+                        
                         Image.asset(
                           "images/clgLogo.png",
                           width: screenHeight * 0.2,
