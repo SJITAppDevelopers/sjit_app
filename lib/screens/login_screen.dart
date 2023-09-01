@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:sjit_app/screens/home_screen.dart';
+// import 'package:sjit_app/screens/home_screen.dart';
 // import 'profile_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -178,11 +177,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       } else {
                         print('Username: $username');
                         print('Password: $password');
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HomeScreen()),
-                        );
+
+                        Navigator.pushNamed(context, 'home');
                       }
                     },
                     child: const Text('Submit'),
@@ -225,7 +221,6 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
         ),
-        //),
       ),
     );
   }
