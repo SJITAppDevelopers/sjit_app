@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         'home': (context) => const HomeScreen(),
         'profile': (context) => const ProfileScreen(),
         'marks': (context) => const DropdownMenuExample(),
-        'marksDisplay':(context)=>const marksDisplay(),
+        'marksDisplay':(context)=>const MarksDisplay(),
       },
     );
   }

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
-// ignore: camel_case_types
-class marksDisplay extends StatefulWidget {
-  const marksDisplay({super.key});
+class MarksDisplay extends StatefulWidget {
+  const MarksDisplay({Key? key}) : super(key: key);
 
   @override
-  State<marksDisplay> createState() => _marksDisplayState();
+  State<MarksDisplay> createState() => _MarksDisplayState();
 }
 
-// ignore: camel_case_types
-class _marksDisplayState extends State<marksDisplay> {
+class _MarksDisplayState extends State<MarksDisplay> {
+  final List<String> subjects = ['Math', 'Science', 'physics','abcd'];
+  final List<int> marks = [90, 85, 92,62,989];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,6 +34,25 @@ class _marksDisplayState extends State<marksDisplay> {
                 child: Image.asset('images/technologyLogo.png'),
               ),
             ],
+          ),
+        ),
+      ),
+      body: Center(
+        child: DataTable(
+          columns: const [
+            DataColumn(label: Text('Subjects')),
+            DataColumn(label: Text('Marks')),
+          ],
+          rows: List<DataRow>.generate(
+            subjects.length,
+            (index) {
+              return DataRow(
+                cells: [
+                  DataCell(Text(subjects[index])),
+                  DataCell(Text(marks[index].toString())),
+                ],
+              );
+            },
           ),
         ),
       ),
