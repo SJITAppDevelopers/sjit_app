@@ -25,14 +25,10 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        
-      ),
-      resizeToAvoidBottomInset: true,
-      body: SafeArea(
+    return 
+      Scaffold(
+        resizeToAvoidBottomInset: true,
+        body: SafeArea(
         child: Container(
           height: screenHeight,
           color: const Color(0xFF121536),
@@ -56,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          height: screenHeight * 0.025,
+                          height: screenHeight * 0.03,
                         ),
                         Image.asset(
                           "images/clgLogo.png",
@@ -125,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     padding: EdgeInsets.only(
                         left: screenWidth * 0.05,
                         right: screenWidth * 0.05,
-                        bottom: screenHeight * 0.01,
+                        bottom: screenHeight * 0.03,
                         top: screenHeight * 0.03),
                     child: TextFormField(
                       controller: _password,
@@ -192,9 +188,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: const Text('Submit'),
                   ),
                   SizedBox(
-                    height: screenHeight*0.01
-                        
-                       
+                    height: screenHeight > 900
+                        ? screenHeight * 0.01
+                        : screenHeight * 0.05,
                   ),
                   Container(
                     decoration: const BoxDecoration(
