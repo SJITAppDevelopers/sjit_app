@@ -31,7 +31,11 @@ class _HomeScreen extends State<HomeScreen> {
               Padding(
                 padding: const EdgeInsets.only(right: 5),
                 // padding:const EdgeInsets.only(top: 5,right:10),
-                child: Image.asset('images/technologyLogo.png',width: 100,height: 100,),
+                child: Image.asset(
+                  'images/technologyLogo.png',
+                  width: 100,
+                  height: 100,
+                ),
               ),
             ],
           ),
@@ -41,7 +45,7 @@ class _HomeScreen extends State<HomeScreen> {
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -50,78 +54,99 @@ class _HomeScreen extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,  // space between logo and name
                 children: [
-                  Image.asset('images/technologyLogo.png',width: 70,height: 70,),
-                  Image.asset('images/clgName.png',width: 250,height: 100,),
+                  Image.asset(
+                    'images/technologyLogo.png',
+                    width: 70,
+                    height: 70,
+                  ),
+                  Image.asset(
+                    'images/clgName.png',
+                    width: 250,
+                    height: 100,
+                  ),
                 ],
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'images/profile.png',
-                  height: 90,
-                  width: 100,
-                ),
-                Image.asset(
-                  'images/attendance.png',
-                  height: 90,
-                  width: 90,
-                ),
-                Image.asset(
-                  'images/mark.png',
-                  height: 90,
-                  width: 90,
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'images/profile.png',
+                    height: 90,
+                    width: 100,
+                  ),
+                  Image.asset(
+                    'images/attendance.png',
+                    height: 90,
+                    width: 90,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'marks');
+                    },
+                    child: Image.asset(
+                      'images/mark.png',
+                      height: 90,
+                      width: 90,
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'images/notes.png',
-                  height: 90,
-                  width: 90,
-                ),
-                Image.asset(
-                  'images/events.png',
-                  height: 90,
-                  width: 90,
-                ),
-                Image.asset(
-                  'images/forms.png',
-                  height: 90,
-                  width: 90,
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'images/notes.png',
+                    height: 90,
+                    width: 90,
+                  ),
+                  Image.asset(
+                    'images/events.png',
+                    height: 90,
+                    width: 90,
+                  ),
+                  Image.asset(
+                    'images/forms.png',
+                    height: 90,
+                    width: 90,
+                  ),
+                ],
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'images/attendance.png',
-                  height: 90,
-                  width: 90,
-                ),
-                Image.asset(
-                  'images/events.png',
-                  height: 90,
-                  width: 90,
-                ),
-                Image.asset(
-                  'images/mark.png',
-                  height: 90,
-                  width: 90,
-                ),
-              ],
-            )
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'images/attendance.png',
+                    height: 90,
+                    width: 90,
+                  ),
+                  Image.asset(
+                    'images/events.png',
+                    height: 90,
+                    width: 90,
+                  ),
+                  Image.asset(
+                    'images/mark.png',
+                    height: 90,
+                    width: 90,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-

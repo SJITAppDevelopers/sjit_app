@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sjit_app/screens/home_screen.dart';
 import 'package:sjit_app/screens/login_screen.dart';
 import 'package:sjit_app/screens/mark_screen.dart';
+import 'package:sjit_app/screens/marks_display.dart';
 import 'package:sjit_app/screens/profile_screen.dart';
 // import 'package:sjit_app/screens/profile_screen.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         'home': (context) => const HomeScreen(),
         'profile': (context) => const ProfileScreen(),
         'marks': (context) => const DropdownMenuExample(),
+        'marksDisplay':(context)=>const marksDisplay(),
       },
     );
   }

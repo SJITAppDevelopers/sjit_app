@@ -27,6 +27,7 @@ class _DropdownMenuExampleState extends State<DropdownMenuExample> {
     // Perform actions when the submit button is pressed
     print('Selected Value: $dropdownValue');
     print('Selected Model: $modelDropdownValue');
+    Navigator.pushNamed(context, 'marksDisplay');
   }
 
   @override
@@ -71,7 +72,7 @@ class _DropdownMenuExampleState extends State<DropdownMenuExample> {
                 return DropdownMenuEntry<String>(value: value, label: value);
               }).toList(),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             DropdownMenu<String>(
               initialSelection: modelDropdownValue,
               onSelected: (String? value) {
@@ -84,10 +85,10 @@ class _DropdownMenuExampleState extends State<DropdownMenuExample> {
                 return DropdownMenuEntry<String>(value: value, label: value);
               }).toList(),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _handleSubmit,
-              child: Text('Submit'),
+              child: const Text('Submit'),
             ),
           ],
         ),
