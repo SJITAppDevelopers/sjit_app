@@ -28,6 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+        elevation: 0,
         
       ),
       resizeToAvoidBottomInset: true,
@@ -55,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          height: screenHeight * 0.03,
+                          height: screenHeight * 0.025,
                         ),
                         Image.asset(
                           "images/clgLogo.png",
@@ -124,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     padding: EdgeInsets.only(
                         left: screenWidth * 0.05,
                         right: screenWidth * 0.05,
-                        bottom: screenHeight * 0.03,
+                        bottom: screenHeight * 0.01,
                         top: screenHeight * 0.03),
                     child: TextFormField(
                       controller: _password,
@@ -191,9 +192,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: const Text('Submit'),
                   ),
                   SizedBox(
-                    height: screenHeight > 900
-                        ? screenHeight * 0.01
-                        : screenHeight * 0.05,
+                    height: screenHeight*0.01
+                        
+                       
                   ),
                   Container(
                     decoration: const BoxDecoration(
