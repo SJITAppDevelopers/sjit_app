@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 // import 'package:sjit_app/screens/mark_screen.dart';
 // import 'profile_screen.dart';
 
@@ -73,24 +74,60 @@ class _HomeScreen extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    'images/profile.png',
-                    height: 90,
-                    width: 100,
+                  Column(
+                    children: [
+                      Image.asset(
+                        'images/profile.png',
+                        height: 90,
+                        width: 100,
+                      ),
+                      Text("Profile",
+                      style:GoogleFonts.kanit(
+                        color:const Color(0xFF121536),
+                        fontSize: 23,
+                        fontWeight: FontWeight.bold,
+                      ))
+                    ],
                   ),
-                  Image.asset(
-                    'images/attendance.png',
-                    height: 90,
-                    width: 90,
+
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'images/attendance.png',
+                        height: 90,
+                        width: 90,
+                      ),
+                      Text("Attendance",
+                      style:GoogleFonts.kanit(
+                        color:const Color(0xFF121536),
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ))
+                    ],
                   ),
                   GestureDetector(
                     onTap: () {
                       Navigator.pushNamed(context, 'marks');
                     },
-                    child: Image.asset(
-                      'images/mark.png',
-                      height: 90,
-                      width: 90,
+                    child: 
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'images/mark.png',
+                          height: 90,
+                          width: 90,
+                        ),
+                        Text("Marks",
+                      style:GoogleFonts.kanit(
+                        color:const Color(0xFF121536),
+                        fontSize: 23,
+                        fontWeight: FontWeight.bold,
+                      ))
+                      ],
                     ),
                   ),
                 ],
@@ -102,20 +139,56 @@ class _HomeScreen extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    'images/notes.png',
-                    height: 90,
-                    width: 90,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'images/notes.png',
+                        height: 90,
+                        width: 90,
+                      ),
+                      Text("Notes",
+                      style:GoogleFonts.kanit(
+                        color:const Color(0xFF121536),
+                        fontSize: 23,
+                        fontWeight: FontWeight.bold,
+                      ))
+                    ],
                   ),
-                  Image.asset(
-                    'images/events.png',
-                    height: 90,
-                    width: 90,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'images/events.png',
+                        height: 90,
+                        width: 90,
+                      ),
+                      Text("Events",
+                      style:GoogleFonts.kanit(
+                        color:const Color(0xFF121536),
+                        fontSize: 23,
+                        fontWeight: FontWeight.bold,
+                      ))
+                    ],
                   ),
-                  Image.asset(
-                    'images/forms.png',
-                    height: 90,
-                    width: 90,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'images/forms.png',
+                        height: 90,
+                        width: 90,
+                      ),
+                      Text("Forms",
+                      style:GoogleFonts.kanit(
+                        color:const Color(0xFF121536),
+                        fontSize: 23,
+                        fontWeight: FontWeight.bold,
+                      ))
+                    ],
                   ),
                 ],
               ),
@@ -126,20 +199,57 @@ class _HomeScreen extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    'images/attendance.png',
-                    height: 90,
-                    width: 90,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        
+                        'images/attendance.png',
+                        height: 90,
+                        width: 90,
+                      ),
+                      Text("Attendance",
+                      style:GoogleFonts.kanit(
+                        color:const Color(0xFF121536),
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ))
+                    ],
                   ),
-                  Image.asset(
-                    'images/events.png',
-                    height: 90,
-                    width: 90,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'images/events.png',
+                        height: 90,
+                        width: 90,
+                      ),
+                      Text("Events",
+                      style:GoogleFonts.kanit(
+                        color:const Color(0xFF121536),
+                        fontSize: 23,
+                        fontWeight: FontWeight.bold,
+                      ))
+                    ],
                   ),
-                  Image.asset(
-                    'images/mark.png',
-                    height: 90,
-                    width: 90,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'images/mark.png',
+                        height: 90,
+                        width: 90,
+                      ),
+                      Text("Marks",
+                      style:GoogleFonts.kanit(
+                        color:const Color(0xFF121536),
+                        fontSize: 23,
+                        fontWeight: FontWeight.bold,
+                      ))
+                    ],
                   ),
                 ],
               ),
