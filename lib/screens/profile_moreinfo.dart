@@ -61,7 +61,7 @@ class _moreinfoState extends State<moreinfo> {
                     child: Column(
                       children: [
                         Image.asset(
-                          'images/profile.png',
+                          'images/profile_academic.png',
                           height: 90,
                           width: 100,
                         ),
@@ -77,7 +77,7 @@ class _moreinfoState extends State<moreinfo> {
                       
                       children: [
                         Image.asset(
-                          'images/profile.png',
+                          'images/profile_admission.png',
                           height: 90,
                           width: 90,
                         ),
@@ -93,7 +93,7 @@ class _moreinfoState extends State<moreinfo> {
                       
                       children: [
                         Image.asset(
-                          'images/profile.png',
+                          'images/profile_parent.png',
                           height: 90,
                           width: 90,
                         ),
@@ -102,6 +102,7 @@ class _moreinfoState extends State<moreinfo> {
                   ),
                 ],
               ),
+              SizedBox(height: 10,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 
@@ -113,7 +114,7 @@ class _moreinfoState extends State<moreinfo> {
                     child: Column(
                       children: [
                         Image.asset(
-                          'images/profile.png',
+                          'images/profile_guardian.png',
                           height: 90,
                           width: 100,
                         ),
