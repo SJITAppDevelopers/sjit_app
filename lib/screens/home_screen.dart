@@ -85,16 +85,17 @@ class _HomeScreen extends State<HomeScreen> {
                           height: 90,
                           width: 100,
                         ),
-                        Text("Profile",
-                        style:GoogleFonts.kanit(
-                          color:const Color(0xFF121536),
-                          fontSize: 23,
-                          fontWeight: FontWeight.bold,
-                        ))
+                        Text(
+                          "Profile",
+                          style: GoogleFonts.kanit(
+                            color: const Color(0xFF121536),
+                            fontSize: 23,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ],
                     ),
                   ),
-
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -105,19 +106,18 @@ class _HomeScreen extends State<HomeScreen> {
                         width: 90,
                       ),
                       Text("Attendance",
-                      style:GoogleFonts.kanit(
-                        color:const Color(0xFF121536),
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                      ))
+                          style: GoogleFonts.kanit(
+                            color: const Color(0xFF121536),
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                          ))
                     ],
                   ),
                   GestureDetector(
                     onTap: () {
                       Navigator.pushNamed(context, 'marks');
                     },
-                    child: 
-                    Column(
+                    child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -127,11 +127,11 @@ class _HomeScreen extends State<HomeScreen> {
                           width: 90,
                         ),
                         Text("Marks",
-                      style:GoogleFonts.kanit(
-                        color:const Color(0xFF121536),
-                        fontSize: 23,
-                        fontWeight: FontWeight.bold,
-                      ))
+                            style: GoogleFonts.kanit(
+                              color: const Color(0xFF121536),
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold,
+                            ))
                       ],
                     ),
                   ),
@@ -154,11 +154,11 @@ class _HomeScreen extends State<HomeScreen> {
                         width: 90,
                       ),
                       Text("Notes",
-                      style:GoogleFonts.kanit(
-                        color:const Color(0xFF121536),
-                        fontSize: 23,
-                        fontWeight: FontWeight.bold,
-                      ))
+                          style: GoogleFonts.kanit(
+                            color: const Color(0xFF121536),
+                            fontSize: 23,
+                            fontWeight: FontWeight.bold,
+                          ))
                     ],
                   ),
                   Column(
@@ -171,11 +171,11 @@ class _HomeScreen extends State<HomeScreen> {
                         width: 90,
                       ),
                       Text("Events",
-                      style:GoogleFonts.kanit(
-                        color:const Color(0xFF121536),
-                        fontSize: 23,
-                        fontWeight: FontWeight.bold,
-                      ))
+                          style: GoogleFonts.kanit(
+                            color: const Color(0xFF121536),
+                            fontSize: 23,
+                            fontWeight: FontWeight.bold,
+                          ))
                     ],
                   ),
                   Column(
@@ -188,11 +188,11 @@ class _HomeScreen extends State<HomeScreen> {
                         width: 90,
                       ),
                       Text("Forms",
-                      style:GoogleFonts.kanit(
-                        color:const Color(0xFF121536),
-                        fontSize: 23,
-                        fontWeight: FontWeight.bold,
-                      ))
+                          style: GoogleFonts.kanit(
+                            color: const Color(0xFF121536),
+                            fontSize: 23,
+                            fontWeight: FontWeight.bold,
+                          ))
                     ],
                   ),
                 ],
@@ -209,17 +209,16 @@ class _HomeScreen extends State<HomeScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Image.asset(
-                        
                         'images/attendance.png',
                         height: 90,
                         width: 90,
                       ),
                       Text("Attendance",
-                      style:GoogleFonts.kanit(
-                        color:const Color(0xFF121536),
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                      ))
+                          style: GoogleFonts.kanit(
+                            color: const Color(0xFF121536),
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                          ))
                     ],
                   ),
                   Column(
@@ -232,11 +231,11 @@ class _HomeScreen extends State<HomeScreen> {
                         width: 90,
                       ),
                       Text("Events",
-                      style:GoogleFonts.kanit(
-                        color:const Color(0xFF121536),
-                        fontSize: 23,
-                        fontWeight: FontWeight.bold,
-                      ))
+                          style: GoogleFonts.kanit(
+                            color: const Color(0xFF121536),
+                            fontSize: 23,
+                            fontWeight: FontWeight.bold,
+                          ))
                     ],
                   ),
                   Column(
@@ -249,11 +248,11 @@ class _HomeScreen extends State<HomeScreen> {
                         width: 90,
                       ),
                       Text("Marks",
-                      style:GoogleFonts.kanit(
-                        color:const Color(0xFF121536),
-                        fontSize: 23,
-                        fontWeight: FontWeight.bold,
-                      ))
+                          style: GoogleFonts.kanit(
+                            color: const Color(0xFF121536),
+                            fontSize: 23,
+                            fontWeight: FontWeight.bold,
+                          ))
                     ],
                   ),
                 ],

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sjit_app/screens/data.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:sjit_app/screens/profile_moreinfo.dart';
 // import 'mark_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -48,7 +50,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              
               children: [
                 Padding(
                   padding: EdgeInsets.all(10),
@@ -59,24 +60,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                 ),
-                dataView("Name", "Vigram KM"),
-                dataView("Year", "2021-2025"),
-                dataView("Department", "Computer science and engineering"),
-                dataView("Name", "Vigram KM"),
-                dataView("Year", "2021-2025"),
-                dataView("Department", "Computer science and engineering"),
-                dataView("Name", "Vigram KM"),
-                dataView("Year", "2021-2025"),
-                dataView("Department", "Computer science and engineering"),
-                dataView("Name", "Vigram KM"),
-                dataView("Year", "2021-2025"),
-                dataView("Department", "Computer science and engineering"),
-                dataView("Name", "Vigram KM"),
-                dataView("Year", "2021-2025"),
-                dataView("Department", "Computer science and engineering"),
-                dataView("Name", "Vigram KM"),
-                dataView("Year", "2021-2025"),
-                dataView("Department", "Computer science and engineering"),
+                dataView("Roll No.", ""),
+                dataView("Reg. No.", ""),
+                dataView("Name", ""),
+                dataView("Gender", ""),
+                dataView("Blood Group", ""),
+                dataView("Batch", ""),
+                dataView("Course", ""),
+                dataView("Department", ""),
+                dataView("Section", ""),
+                dataView("Mobile No.", ""),
+                dataView("Mail Id", ""),
+                dataView("Food", ""),
+                dataView("Accomodation", ""),
+                Container(
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: (){
+                      Navigator.pushNamed(context, 'moreDetails');
+                    },
+                    child: Text(
+                      'More Info',
+                      style: GoogleFonts.nunito(
+                        fontSize: 20,
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
