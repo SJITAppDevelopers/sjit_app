@@ -74,20 +74,25 @@ class _HomeScreen extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Column(
-                    children: [
-                      Image.asset(
-                        'images/profile.png',
-                        height: 90,
-                        width: 100,
-                      ),
-                      Text("Profile",
-                      style:GoogleFonts.kanit(
-                        color:const Color(0xFF121536),
-                        fontSize: 23,
-                        fontWeight: FontWeight.bold,
-                      ))
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'profile');
+                    },
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'images/profile.png',
+                          height: 90,
+                          width: 100,
+                        ),
+                        Text("Profile",
+                        style:GoogleFonts.kanit(
+                          color:const Color(0xFF121536),
+                          fontSize: 23,
+                          fontWeight: FontWeight.bold,
+                        ))
+                      ],
+                    ),
                   ),
 
                   Column(
