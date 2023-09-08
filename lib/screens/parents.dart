@@ -57,15 +57,18 @@ class _parentsState extends State<parents> {
                     ),
                   ),
                 ),
-                Text(
-                  "Father's Details",
-                  style: GoogleFonts.nunito(
-                    fontSize: 40,
-                    color: Color.fromARGB(255, 0, 0, 0),
-                    fontWeight: FontWeight.bold,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Father's Details",
+                    style: GoogleFonts.nunito(
+                      fontSize: 40,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-                dataView("Father's Name.", ""),
+                dataView("Name.", ""),
                 dataView("Qualification", ""),
                 dataView("Address", ""),
                 dataView("Mobile", ""),
@@ -83,15 +86,18 @@ class _parentsState extends State<parents> {
                     ),
                   ),
                 ),
-                Text(
-                  "Mother's Details",
-                  style: GoogleFonts.nunito(
-                    fontSize: 40,
-                    color: Color.fromARGB(255, 0, 0, 0),
-                    fontWeight: FontWeight.bold,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Mother's Details",
+                    style: GoogleFonts.nunito(
+                      fontSize: 40,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-                dataView("Mother's Name.", ""),
+                dataView("Name.", ""),
                 dataView("Qualification", ""),
                 dataView("Address", ""),
                 dataView("Mobile", ""),
