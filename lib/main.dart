@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sjit_app/screens/academic.dart';
 import 'package:sjit_app/screens/admission.dart';
 import 'package:sjit_app/screens/home_screen.dart';
+import 'package:sjit_app/screens/local1.dart';
 import 'package:sjit_app/screens/login_screen.dart';
 import 'package:sjit_app/screens/mark_screen.dart';
 import 'package:sjit_app/screens/marks_display.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         'academics' :(context)=>const academicState(),
         'admission' :(context)=>const admissions(),
         'parents' :(context)=>const parents(),
+        'local1' :(context)=>const local1(),
       
       },
     );

@@ -46,57 +46,83 @@ class _moreinfoState extends State<moreinfo> {
         child: Container(
           margin: const EdgeInsets.all(20),
           child: Center(
-            child: Row(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, 'academics');
-                  },
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        'images/profile.png',
-                        height: 90,
-                        width: 100,
-                      ),
-                    ],
+              
+              children:[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'academics');
+                    },
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'images/profile.png',
+                          height: 90,
+                          width: 100,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, 'admission');
-                  },
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'images/profile.png',
-                        height: 90,
-                        width: 90,
-                      ),
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'admission');
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      
+                      children: [
+                        Image.asset(
+                          'images/profile.png',
+                          height: 90,
+                          width: 90,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, 'parents');
-                  },
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'images/profile.png',
-                        height: 90,
-                        width: 90,
-                      ),
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'parents');
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      
+                      children: [
+                        Image.asset(
+                          'images/profile.png',
+                          height: 90,
+                          width: 90,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'local1');
+                    },
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'images/profile.png',
+                          height: 90,
+                          width: 100,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              ]
             ),
           ),
         ),
