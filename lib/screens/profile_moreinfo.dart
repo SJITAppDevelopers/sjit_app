@@ -64,20 +64,25 @@ class _moreinfoState extends State<moreinfo> {
                     ],
                   ),
                 ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'images/profile.png',
-                      height: 90,
-                      width: 90,
-                    ),
-                  ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, 'admission');
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'images/profile.png',
+                        height: 90,
+                        width: 90,
+                      ),
+                    ],
+                  ),
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, 'marks');
+                    Navigator.pushNamed(context, 'parents');
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,

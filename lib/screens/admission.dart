@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:sjit_app/screens/data.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-class academicState extends StatefulWidget {
-  const academicState({super.key});
+class admissions extends StatefulWidget {
+  const admissions({super.key});
 
   @override
-  State<academicState> createState() => _academicStateState();
+  State<admissions> createState() => _admissionsState();
 }
 
-class _academicStateState extends State<academicState> {
+class _admissionsState extends State<admissions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,28 +50,50 @@ class _academicStateState extends State<academicState> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  "Academic Details",
+                  "Admission Details",
                   style: GoogleFonts.nunito(
                     fontSize: 40,
                     color: Color.fromARGB(255, 0, 0, 0),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                dataView("10th School", ""),
-                dataView("Marks Obtained", ""),
-                dataView("Board", ""),
+                dataView("Date of Admission", ""),
+                dataView("Admission allotment", ""),
+                dataView("Overall Rank", ""),
+                dataView("Community Rank", ""),
+                dataView("Sports Admission", ""),
+                dataView("Game Name", ""),
                 dataView("Medium of Instruction", ""),
-                dataView("Year of Passing", ""),
-                dataView("12th School", ""),
-                dataView("Marks Obtained", ""),
-                dataView("Board", ""),
-                dataView("Medium of Instruction", ""),
-                dataView("Year Of Passing", ""),
-                dataView("Diploma College", ""),
-                dataView("Marks Obtained", ""),
-                dataView("Board", ""),
-                dataView("Medium of Instruction", ""),
-                dataView("Year Of Passing", ""),
+                Text(
+                  "General Details",
+                  style: GoogleFonts.nunito(
+                    fontSize: 40,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                dataView("Date Of Birth", ""),
+                dataView("Caste", ""),
+                dataView("Parents Annual Income", ""),
+                dataView("Religion", ""),
+                dataView("Nationality", ""),
+                dataView("Mother Tongue", ""),
+                dataView("Member of(NSS/YRC/NCC/others)", ""),
+                Text(
+                  "Other Details",
+                  style: GoogleFonts.nunito(
+                    fontSize: 40,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                dataView("transfered From", ""),
+                dataView("Institution Name", ""),
+                dataView("Address", ""),
+                dataView("Group", ""),
+                dataView("Year and Month of Admission", ""),
+                dataView("Year and Month of Relief", ""),
+                dataView("Course Completed in Time", ""),
               ],
             ),
           ),
